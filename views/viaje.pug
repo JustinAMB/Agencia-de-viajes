@@ -1,0 +1,24 @@
+extends ./layouts/index
+
+block contenido
+    main(class="container mt-5")
+        div(class="row")
+            div(class="col-md-5")
+                img(src=`/img/destinos_${resultado.imagen}_ln.jpg`, alt="",class="img-fluid")
+            div(class="col-md-7")
+                h1 #{resultado.titulo}
+                p
+                    img(src="/img/icono_calendario.svg", width=40,height=40)
+                    |  #{resultado.fecha_ida} - #{resultado.fecha_vuelta}
+                P
+                    img(src="/img/icono_precio.svg", width=40,height=40)
+                    | #{resultado.precio} Dolares
+                p
+                    img(src="/img/icono_disponibles.svg", width=40,height=40,class="icon")
+                    | #{resultado.disponibles} Disponibles
+                p=resultado.descripcion
+                
+
+
+               
+    

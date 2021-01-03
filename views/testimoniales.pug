@@ -1,0 +1,21 @@
+extends ./layouts/index
+
+block contenido
+    main(class="container mt-5")
+        h1(class="text-center mt-5") #{pagina}
+        div(class="row")
+            h2(class="d-block w-100 text-center") Agrega un Testimonial
+            div(class="row justify-content-center col")
+                div(class="col-md-8")
+                    form(action="/testimoniales", method="post")
+                        div(class="form-group")
+                            label(for="nombre") Nombre
+                            input#nombre(type="text", name="nombre",placeholder="Tu Nombre",class="form-control",required)
+                        div(class="form-group")
+                            label(for="correo") Correo Electrónico
+                            input#correo(type="email", name="correo",placeholder="Tu Correo",class="form-control" ,required)
+                        div(class="form-group")
+                            label(for="mensaje") Mensaje
+                            textarea#mensaje( name="mensaje",placeholder="Tu Mensaje",rows=3,class="form-control",required)
+                        input(type="submit", class="btn btn-success btn-block")
+            
