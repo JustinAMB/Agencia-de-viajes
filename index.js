@@ -29,5 +29,5 @@ app.use('/', router);
 const port = process.env.PORT || 400;
 
 app.listen(port, () => {
-    console.log(`Funciona ${host}`);
+    console.log(`Funciona ${port}`);
 })
