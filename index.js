@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 db.authenticate()
     .then(() => console.log("sirve"))
-    .catch(error => console.log('error'));
+    .catch(error => console.log(error));
 
 //habilitar pug
 app.set('view engine', 'pug');
